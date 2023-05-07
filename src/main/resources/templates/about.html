@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <script th:src="@{/Js/main.js}"></script>
+	    	<link rel="stylesheet" th:href="@{/Css/home.css}">
+
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<div th:replace="navbar"></div>
+	<br>
+	 <div class="sidebar">
+          <span onclick="toogleSidebar()" class="crossbtn">&times;</span>
+            <a href="" th:href="@{/home}"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
+            <a href="" th:href="@{/skill}"><i class="fa-solid fa-plus"></i></i>&nbsp;Skills</a>
+
+            <a href="" th:href="@{/about}"><i class="fa-solid fa-list"></i>&nbsp;About</a>
+           
+           
+
+
+
+
+            
+        </div>
+     <i onclick="toogleSidebar()" style="font-size: 28px; margin-left: 5%;" class="fa-solid fa-bars toggle m"></i>
+&nbsp;  <br>
+	<h1 style="text-align: center;color: white; border-bottom:3px solid #00986f;">About</h1>
+
+	<div class="">
+		<br>
+		<div class="mainskill" style="margin: 0 auto;">
+
+
+			<div class="headskill"  th:each="a : ${about}"  style="box-shadow: 3px 3px 10px 0px grey; margin: 0 auto;">
+
+					<div  class=" dataproject" >
+
+
+						<div class="about text-center">
+						<br><br>
+							<img  th:src="@{'/images/vks.png'}" />
+						<br>
+						<br>
+							<p style="color: white;" th:text="${a.about}"></p>
+
+</div>
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+
+</html>

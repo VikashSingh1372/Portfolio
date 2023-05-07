@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Page Title</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" th:href="@{/Css/home.css}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	    <script th:src="@{/Js/main.js}"></script>
+
+
+</head>
+
+<body>
+
+	<div th:replace="navbar"></div>
+	<br>
+	 <div class="sidebar">
+          <span onclick="toogleSidebar()" class="crossbtn">&times;</span>
+            <a href="" th:href="@{/home}"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
+            <a href="" th:href="@{/skill}"><i class="fa-solid fa-plus"></i></i>&nbsp;Skills</a>
+
+            <a href="" th:href="@{/about}"><i class="fa-solid fa-list"></i>&nbsp;About</a>
+           
+           
+
+
+
+
+            
+        </div>
+     <i onclick="toogleSidebar()"  style="font-size: 28px; margin-left: 5%;" class="fa-solid fa-bars toggle m"></i>
+&nbsp;  <br>
+
+			<h1 style="text-align: center;color: white; border-bottom:3px solid #00986f;">Skills</h1>
+			<br>
+			<br>
+
+		<div class="mainskill">
+		
+			<div class="headskills">
+			
+				<div class="dataskill" th:each="s : ${skill}">
+
+					<img  th:src="@{'/images/' + ${s.pimage}}" />
+<br>
+<h2 style="color: #00986f;"  th:text ="${s.name}"   ></h2>
+
+					<p style="color: white;" th:text="${s.description}">h</p>
+					</div>
+				</div>
+			</div>\
+			<br>
+			
+
+
+</body>
+
+</html>
