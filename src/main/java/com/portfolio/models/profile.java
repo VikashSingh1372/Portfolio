@@ -19,11 +19,11 @@ public class profile {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
-	@Column(length = 10000)
+	@Column(length = 1000)
 	private String graduation;
-	@Column(length = 10000)
+	@Column(length = 1000)
 	private String intermediate;
-	@Column(length = 10000)
+	@Column(length = 1000)
 	private String matriculation;
 	private String pimage;
 
