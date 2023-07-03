@@ -42,15 +42,22 @@
 	<h1 style="text-align: center;color: white; border-bottom:3px solid #00986f;">Projects</h1>
 	<br>
 	<br>
-
+<div style="text-align: center;display: flex;justify-content: space-around;">
+	<a th:href="@{https://www.loom.com/share/6e75a81f8ee54725927a0e389ae87bf9?sid=5ff7f887-ee74-49f7-b0aa-9aeac23bdce3}" >Vkart Project Link</a>
+	<a th:href="@{https://www.loom.com/share/fc1c79f062ed4f80b69ffcd44a117f94?sid=85931768-d68a-481b-be35-6d64eff70630}" >GratisLearn Project Link</a>
+</div>
+<br><br>
 	<div class="mainskill">
+	
 
 		<div class="p">
+	
 
 			<div class="datap " th:each="ps : ${project}" style="box-shadow: 3px 3px 10px 0px #00986f; margin: 0 auto;">
 
 					<h2 style="color: #00986f; text-align: center;" th:text="${ps.name}"></h2>
 					<p th:text="${ps.description}"></p>
+					
   				<a  style="text-decoration: none;" th:href="@{/myprojects/{id} (id=${ps.id})}">
                          View Detail
 
