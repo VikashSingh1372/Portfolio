@@ -10,6 +10,8 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	    <script th:src="@{/Js/main.js}"></script>
 	    	<link rel="stylesheet" th:href="@{/Css/home.css}">
+	    		   	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,36 +41,102 @@
 
 	<div class="">
 		<br>
-		<div class="mainskill" style="margin: 0 auto;">
+		<div class="mainskill" style="margin: 0 auto; max-width: 700px;">
 
 
-			<div class="headskill"  th:each="a : ${about}"  style="box-shadow: 3px 3px 10px 0px grey; margin: 0 auto;">
+			<div class="headskill" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" th:each="a : ${about}"  style="box-shadow: 3px 3px 10px 0px grey; margin: 0 auto;">
 
 					<div  class=" dataproject" >
 
 
 						<div class="about text-center">
 						<br><br>
-							<img  th:src="@{'/images/vks.png'}" />
+							<img style=" width: 250px; height: 250px;"  th:src="@{'/images/vks.png'}" />
 						<br>
 						<br>
 							<p style="color: white;" th:text="${a.about}"></p>
+							
+		                	<p style="color: white;">Gmail : viksh1372@gmail.com</p>
+							<p style="color: white;" >Phone: 9060138446</p>
+
 
 </div>
 
 
 
+ <div  th:each ="m :${profile}"> 
+					<div class="form-group">
+					<b>	<label style="color: rgb(255, 255, 255);" for="exampleInputEmail1">Graduation details : </label></b>
+											<p style="color: rgb(255, 255, 255);"  th:text="${m.graduation}"></p> 
 
+						</div>
+							<div class="form-group">
+					<b>	<label style="color: rgb(255, 255, 255);" for="exampleInputEmail1">12th details :</label></b>
+											<p  style="color: rgb(255, 255, 255);" th:text="${m.intermediate}"></p> 
+
+						</div>
+							<div class="form-group">
+					<b>	<label style="color: rgb(255, 255, 255);" for="exampleInputEmail1">10th details :</label></b>
+											<p  style="color: rgb(255, 255, 255);" th:text="${m.matriculation}"></p> 
+
+						</div>
+				  </div>
 
 
 
 				</div>
+				 
+					
 			</div>
 		</div>
 	</div>
-	
+<br><br>
+<footer class="footer"  data-aos="fade-up"  data-aos-duration="1000">
 
+			<div class="footer-col">
+				<h4>Frontend</h4>
 
+				<a href="#">html</a><br>
+				<a href="#">css</a><br>
+				<a href="#">javascript</a><br>
+				<a href="#">react js</a><br>
+
+			</div>
+			<div class="footer-col">
+				<h4>Backend</h4>
+				<a href="#">Java</a><br>
+				<a href="#">Python</a><br>
+				<a href="#">Node js</a><br>
+
+			</div>
+			<div class="footer-col">
+				<h4>Contact</h4>
+				<div>
+
+					<a href="#">Gmail : viksh1372@gmail.com</a><br>
+					<a href="#">Phone :  9060138446</a><br>
+
+				</div>
+
+			</div>
+			<div class="footer-col">
+				<h4>follow us</h4>
+				<div class="social-links">
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-facebook-f"></i></a>
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-twitter"></i></a>
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-instagram"></i></a>
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-linkedin-in"></i></a>
+				</div>
+			</div>
+
+		</footer>
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

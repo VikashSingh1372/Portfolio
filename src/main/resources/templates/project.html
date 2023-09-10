@@ -8,7 +8,6 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="navbar.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -16,6 +15,7 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script th:src="@{/Js/main.js}"></script>
 	<link rel="stylesheet" th:href="@{/Css/home.css}">
+	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 </head>
@@ -34,7 +34,7 @@
 
 
 	</div>
-	<i onclick="toogleSidebar()" style="font-size: 28px; margin-left: 5%;" class="fa-solid fa-bars toggle m"></i>
+	<i onclick="toogleSidebar()"  class="fa-solid fa-bars toggle m"></i>
 	&nbsp; <br>
 
 
@@ -43,39 +43,47 @@
 	<br>
 	<br>
 <div style="text-align: center;display: flex;justify-content: space-around;">
-	<a th:href="@{https://www.loom.com/share/6e75a81f8ee54725927a0e389ae87bf9?sid=5ff7f887-ee74-49f7-b0aa-9aeac23bdce3}" >Vkart Project Link</a>
-	<a th:href="@{https://www.loom.com/share/fc1c79f062ed4f80b69ffcd44a117f94?sid=85931768-d68a-481b-be35-6d64eff70630}" >GratisLearn Project Link</a>
 </div>
 <br><br>
-	<div class="mainskill">
+	<div class="mainskill" >
 	
 
-		<div class="p">
+		<div class="p" >
 	
 
-			<div class="datap " th:each="ps : ${project}" style="box-shadow: 3px 3px 10px 0px #00986f; margin: 0 auto;">
+			<div class="datap " data-aos="flip-left" data-aos-duration="1000" th:each="ps : ${project}" style="box-shadow: 3px 3px 10px 0px #00986f; margin: 0 auto;border-radius: 4px;">
 
-					<h2 style="color: #00986f; text-align: center;" th:text="${ps.name}"></h2>
+					<h5 style="color: #00986f; text-align: center;" th:text="${ps.name}"></h5> 
+					<div class="fl project">
+						<img style="width: 100%;height: 30vh; border-radius: 4px;" th:src="@{'/images/' + ${ps.pimage}}" />
+					</div>
 					<p th:text="${ps.description}"></p>
 					
+
   				<a  style="text-decoration: none;" th:href="@{/myprojects/{id} (id=${ps.id})}">
                          View Detail
 
-				</a>
+				</a>  &nbsp;&nbsp;&nbsp;
+													  <a th:href="${ps.link}"  >Project Link</a>
+
+
 			</div>
-			<br><br>
 
 		</div>
 		<br>
 	</div>
 
 
+			<br><br>
+			
 
 
 
 
-
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 
