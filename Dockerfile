@@ -1,9 +1,5 @@
-FROM eclipse-temurin:17-jdk-alpine
+FROM mysql/mysql-server:8.0.24
 
-VOLUME /tmp
-
-COPY target/*.jar app.jar
-
-ENTRYPOINT ["java", "-jar", "weather_app.jar"]
+COPY config/user.cnf /etc/mysql/my.cnf
 
 EXPOSE 8080
