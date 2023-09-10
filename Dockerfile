@@ -4,6 +4,6 @@ VOLUME /tmp
 
 COPY target/*.jar app.jar
 
-ENTRYPOINT ["java", "-jar", "MyPortfolio.jar"]
+ENTRYPOINT ["java", "-jar", "weather_app.jar"]
 
 EXPOSE 8080
