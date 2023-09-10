@@ -11,6 +11,7 @@
 		<link rel="stylesheet" th:href="@{/Css/home.css}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	   	  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	    <script th:src="@{/Js/main.js}"></script>
 
 
@@ -45,7 +46,7 @@
 		
 			<div class="headskills">
 			
-				<div class="dataskill" th:each="s : ${skill}">
+				<div class="dataskill" th:each="s : ${skill}" data-aos="fade-up" data-aos-duration="1000">
 
 					<img  th:src="@{'/images/' + ${s.pimage}}" />
 <br>
@@ -54,11 +55,52 @@
 					<p style="color: white;" th:text="${s.description}">h</p>
 					</div>
 				</div>
-			</div>\
+			</div>
 			<br>
-			
+			<footer class="footer"  data-aos="fade-up"  data-aos-duration="1000">
 
+			<div class="footer-col">
+				<h4>Frontend</h4>
 
+				<a href="#">html</a><br>
+				<a href="#">css</a><br>
+				<a href="#">javascript</a><br>
+				<a href="#">react js</a><br>
+
+			</div>
+			<div class="footer-col">
+				<h4>Backend</h4>
+				<a href="#">Java</a><br>
+				<a href="#">Python</a><br>
+				<a href="#">Node js</a><br>
+
+			</div>
+			<div class="footer-col">
+				<h4>Framework</h4>
+				<div>
+
+					<a href="#">Spring</a><br>
+					<a href="#">Springboot</a><br>
+
+				</div>
+
+			</div>
+			<div class="footer-col">
+				<h4>follow us</h4>
+				<div class="social-links">
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-facebook-f"></i></a>
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-twitter"></i></a>
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-instagram"></i></a>
+					<a href="#"><i style="margin-left: 3px;" class="fab fa-linkedin-in"></i></a>
+				</div>
+			</div>
+
+		</footer>
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

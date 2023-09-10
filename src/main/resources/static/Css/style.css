@@ -6,7 +6,6 @@
     box-sizing: border-box;
                 color: #fff;
                 text-decoration: none;
-              user-select: none;
              
                            
 
@@ -15,9 +14,7 @@
 }
 .m{
 	display: none;
-	opacity: 0;
-	color: white;
-	cursor: pointer;
+	
 }
 .crossbtn{
 	display: block;
@@ -294,7 +291,6 @@ display: block;
   
     
 .m{
-	opacity: 1;
 	display: block;
 	color: white;
 		font-size: 28px;
@@ -327,7 +323,6 @@ display: block;
         background: rgb(54, 54, 54);
         display: none;
         border-radius: 5px;
-        z-index: 99999;
 
 
 }

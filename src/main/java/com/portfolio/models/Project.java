@@ -32,7 +32,7 @@ public class Project {
 	private String duration;
 	private String frontend;
 	private String backend;
-	
+	private String link;
 	private String pimage;
 	private String framework;
 	@Column(length = 10000)

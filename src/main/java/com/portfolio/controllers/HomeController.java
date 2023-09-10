@@ -41,6 +41,8 @@ public class HomeController {
 	@GetMapping("/home")
 	public String home(Model model) {
 		model.addAttribute("profile", this.profileRepo.findAll());
+		model.addAttribute("skill", this.skillRepo.findAll());
+
 
 		return "home";
 		

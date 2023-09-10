@@ -15,7 +15,7 @@
 		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script th:src="@{/Js/main.js}"></script>
-	<link rel="stylesheet" th:href="@{/Css/home.css}">
+	<link rel="stylesheet" th:href="@{/Css/style.css}">
 
 
 </head>
@@ -82,9 +82,18 @@
 						<p th:text="${p.frontend}"></p>
 
 					</div>
-					<div class=" fl">
+					<div class=" fl" style="cursor: pointer;">
 						<h5  style="color: #00986f;" for="exampleInputEmail1">Backend Technologies :</h5 >
-						<p th:text="${p.backend}"></p>
+						  <p th:text="${p.backend}"></p>
+
+
+
+					</div>
+					<div class=" fl" style="cursor: pointer;">
+						<h5  style="color: #00986f;" for="exampleInputEmail1">Loom video Link :</h5 >
+						  <a th:href="${p.link}" th:text="${p.link}">this</a>
+
+
 
 					</div>
 					<div class="fl">
